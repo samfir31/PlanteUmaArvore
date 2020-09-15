@@ -41,6 +41,12 @@ public class TemaController {
 				.orElse(ResponseEntity.notFound().build());						//Retorna caso a opção acima estiver vazia	
 	}
 	
+	@GetMapping("/nome/{nome}")
+	public ResponseEntity<List<Tema>> getByName(@PathVariable String nome){       // retorna uma lista por nome pesquisado
+		return ResponseEntity.ok(trepository.findAllByNomeContainingIgnoreCase(nome));
+		
+	}
+	
 	@PostMapping
 	public ResponseEntity<Tema> post (@RequestBody Tema tema){    //Modela um tema pelo corpo
 		return ResponseEntity.status(HttpStatus.CREATED).body(trepository.save(tema));   // Retorna status de criado caso finalizado com sucesso
