@@ -38,9 +38,7 @@ public class Tema {
 	private List<Postagem> postagem;
 	
 	
-	// @OneToMany(mappedBy = "PlanteUmaArvore", cascade = CascadeType.ALL)        // mapeia o atributo tema
-	// @JsonIgnoreProperties("PlanteUmaArvore")									//ignora a duplicidade		
-	// private List<Postagem> postagem;
+	
 
 	public long getId() {
 		return id;
