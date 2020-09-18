@@ -1,0 +1,16 @@
+org\generation\PlanteUmaArvore\controller\PostagemController.class
+org\generation\PlanteUmaArvore\repository\TemaRepository.class
+org\generation\PlanteUmaArvore\repository\PostagemRepository.class
+org\generation\PlanteUmaArvore\model\Usuario.class
+org\generation\PlanteUmaArvore\PlanteUmaArvoreApplication.class
+org\generation\PlanteUmaArvore\model\Postagem.class
+org\generation\PlanteUmaArvore\controller\TemaController.class
+org\generation\PlanteUmaArvore\controller\UsuarioController.class
+org\generation\PlanteUmaArvore\config\SwaggerConfig.class
+org\generation\PlanteUmaArvore\service\UsuarioService.class
+org\generation\PlanteUmaArvore\security\UserDetailsServiceImpl.class
+org\generation\PlanteUmaArvore\security\UserDetailsImpl.class
+org\generation\PlanteUmaArvore\repository\UsuarioRepository.class
+org\generation\PlanteUmaArvore\model\UserLogin.class
+org\generation\PlanteUmaArvore\model\Tema.class
+org\generation\PlanteUmaArvore\security\BasicSecurityConfig.class
