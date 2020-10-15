@@ -28,7 +28,7 @@ public class Postagem {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new java.sql.Date(System.currentTimeMillis());
 	
-	@NotNull
+	
 	private boolean privacidade;
 	
 	@NotNull
@@ -71,6 +71,14 @@ public class Postagem {
 	public void setMidia(BlobType midia) {
 		this.midia = midia;
 	}
+	public Tema getTema() {
+		return tema;
+	}
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
+	
+	
 	
 	
 }

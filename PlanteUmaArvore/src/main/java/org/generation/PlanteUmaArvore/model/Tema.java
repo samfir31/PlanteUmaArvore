@@ -26,11 +26,11 @@ public class Tema {
 	@Size(min = 5, max = 70)
 	private String nome;
 	
-	@NotNull
+	
 	@Size(min = 5, max = 70)
 	private String tipo;
 	
-	@NotNull
+	
 	private boolean disponibilidade;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
@@ -72,5 +72,14 @@ public class Tema {
 	public void setDisponibilidade(boolean disponibilidade) {
 		this.disponibilidade = disponibilidade;
 	}
+
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
+	}
+	
 		
 }
