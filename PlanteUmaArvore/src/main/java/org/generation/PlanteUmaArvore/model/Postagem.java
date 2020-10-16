@@ -2,6 +2,7 @@ package org.generation.PlanteUmaArvore.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,14 +29,14 @@ public class Postagem {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new java.sql.Date(System.currentTimeMillis());
 	
-	
+	@Column(nullable = false, columnDefinition = "TINYINT(1)")
 	private boolean privacidade;
 	
 	@NotNull
-	@Size(min = 10, max = 500)
+	@Size(min = 3, max = 500)
 	private String descricao;
 	
-	private BlobType midia;
+	private String midia;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
@@ -53,6 +54,7 @@ public class Postagem {
 	public void setData(Date data) {
 		this.data = data;
 	}
+	
 	public boolean isPrivacidade() {
 		return privacidade;
 	}
@@ -65,10 +67,11 @@ public class Postagem {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public BlobType getMidia() {
+	
+	public String getMidia() {
 		return midia;
 	}
-	public void setMidia(BlobType midia) {
+	public void setMidia(String midia) {
 		this.midia = midia;
 	}
 	public Tema getTema() {
