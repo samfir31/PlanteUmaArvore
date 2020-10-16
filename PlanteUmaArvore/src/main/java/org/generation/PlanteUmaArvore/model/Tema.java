@@ -23,11 +23,11 @@ public class Tema {
 	private long id;
 	
 	@NotNull
-	@Size(min = 5, max = 70)
+	@Size(min = 3, max = 70)
 	private String nome;
 	
 	
-	@Size(min = 5, max = 70)
+	@Size(min = 3, max = 70)
 	private String tipo;
 	
 	

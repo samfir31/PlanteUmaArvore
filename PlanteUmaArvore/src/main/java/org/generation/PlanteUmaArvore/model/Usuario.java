@@ -1,5 +1,6 @@
 package org.generation.PlanteUmaArvore.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,11 +18,12 @@ public class Usuario {
 	private long id;
 	
 	@NotNull
+	@Column(unique = true)
 	@Size(min = 5, max = 70)
 	private String email;
 	
 	@NotNull
-	@Size(min = 5, max = 70)	
+	@Size(min = 3, max = 70)	
 	private String nome;
 	
 	@NotNull
